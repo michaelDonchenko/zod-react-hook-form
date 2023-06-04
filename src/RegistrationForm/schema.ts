@@ -38,7 +38,6 @@ export const registrationSchema = z
       const nowMinus18Years = now.getTime() - 567648000000;
       const isValidAge = birthday.getTime() < nowMinus18Years;
 
-      console.log(birthday.getTime(), nowMinus18Years, isValidAge);
       if (Number.isNaN(birthday.getTime())) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
